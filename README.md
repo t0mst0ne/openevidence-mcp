@@ -173,6 +173,67 @@ Expected smoke result:
 
 MCP stdio servers normally start on demand when the client checks or uses them. They do not need to run as a separate daemon.
 
+## How To Ask Questions
+
+After registration, ask your MCP client in plain English and mention OpenEvidence. The agent should call `oe_ask` automatically.
+
+Example prompts:
+
+```text
+Use OpenEvidence to answer: DLBCL frontline treatment landscape NCCN v3.2026. Include citations and BibTeX.
+```
+
+```text
+Use OpenEvidence to compare Pola-R-CHP vs R-CHOP in untreated DLBCL. Include trial citations and BibTeX.
+```
+
+```text
+Use OpenEvidence to review current evidence for SGLT2 inhibitors in HFpEF. Include citations and BibTeX.
+```
+
+```text
+Use OpenEvidence to find guideline-supported anticoagulation options for cancer-associated thrombosis.
+```
+
+The underlying MCP call looks like this:
+
+```json
+{
+  "tool": "oe_ask",
+  "arguments": {
+    "question": "DLBCL frontline treatment landscape NCCN v3.2026",
+    "wait_for_completion": true,
+    "include_bibtex": true
+  }
+}
+```
+
+`oe_ask` returns:
+
+- the OpenEvidence article payload
+- `article_id`
+- extracted answer markdown as `extracted_answer_raw`
+- artifact file paths
+- inline BibTeX as `artifacts.bibtex`
+- saved citation files under the artifact directory
+
+To fetch BibTeX for a prior answer, ask:
+
+```text
+Use OpenEvidence to fetch article <ARTICLE_ID> and show the BibTeX.
+```
+
+That maps to `oe_article_get`:
+
+```json
+{
+  "article_id": "<ARTICLE_ID>",
+  "include_bibtex": true
+}
+```
+
+If the response is too large, use `include_bibtex: false`; the server will still write `citations.bib` to disk.
+
 ## Citation Artifacts
 
 Completed `oe_ask` and `oe_article_get` calls save artifacts under:
