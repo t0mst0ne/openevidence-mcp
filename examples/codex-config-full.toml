@@ -1,0 +1,6 @@
+[mcp_servers.openevidence]
+command = "node"
+args = ["/ABSOLUTE/PATH/openevidence-mcp/dist/server.js"]
+startup_timeout_sec = 60
+[mcp_servers.openevidence.env]
+OE_MCP_COOKIES_PATH = "/ABSOLUTE/PATH/openevidence-mcp/cookies.json"

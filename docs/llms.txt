@@ -1,0 +1,63 @@
+# OpenEvidence MCP
+
+> Unofficial open-source MCP server for OpenEvidence.
+
+## What It Is
+- OpenEvidence is used by doctors and clinical teams for evidence-backed medical Q&A.
+- OpenEvidence MCP connects that workflow to MCP-compatible clients.
+
+## Who It Helps
+- Physicians
+- Clinical researchers
+- Medical AI operators
+- Teams using Codex CLI/Claude Code/OpenClaw/Cursor/Cline/Continue with MCP
+
+## Core Capabilities
+- Validate OpenEvidence auth (`oe_auth_status`)
+- List OpenEvidence history (`oe_history_list`)
+- Get full article payload (`oe_article_get`)
+- Ask and optionally wait (`oe_ask`)
+
+## Canonical
+- Site: https://github.com/htlin222/openevidence-mcp
+- Repo: https://github.com/htlin222/openevidence-mcp
+- Human setup: https://github.com/htlin222/openevidence-mcp/blob/main/README.md
+- AI setup: https://github.com/htlin222/openevidence-mcp/blob/main/README.AI.md
+- RU page: https://github.com/htlin222/openevidence-mcp/tree/main/docs/i18n/ru
+- ES page: https://github.com/htlin222/openevidence-mcp/tree/main/docs/i18n/es
+- ZH page: https://github.com/htlin222/openevidence-mcp/tree/main/docs/i18n/zh
+- HI page: https://github.com/htlin222/openevidence-mcp/tree/main/docs/i18n/hi
+
+## Platforms
+- macOS
+- Windows
+- Ubuntu/Linux
+
+## MCP Client Keywords
+- Codex CLI
+- Claude Desktop
+- Claude Code
+- OpenClaw
+- Cursor
+- Cline
+- Continue
+
+## Multilingual Search Terms
+- EN: openevidence mcp, openevidence for doctors, medical mcp server, codex cli claude code openclaw, evidence based medicine ai workflow
+- RU: openevidence mcp, mcp сервер для врачей, медицинский mcp сервер, codex cli claude code openclaw, интеграция openevidence mcp
+- ES: openevidence mcp, servidor mcp para médicos, mcp médico open source, codex cli claude code openclaw, integración openevidence
+- ZH: openevidence mcp, 医疗 mcp 服务器, codex cli claude code openclaw, openevidence 集成, 循证医学 ai workflow mcp
+- HI: openevidence mcp, medical mcp server for doctors, codex cli claude code openclaw, evidence based medicine ai workflow
+
+## Specialty Search Terms
+- cardiology evidence assistant mcp
+- endocrinology clinical workflow mcp
+- oncology literature review mcp server
+- emergency medicine quick evidence mcp
+- differential diagnosis support mcp doctors
+
+## Semantic Map
+- `docs/SEMANTIC_CORE.md`
+
+## Expanded Machine Context
+- `llms-full.txt`
