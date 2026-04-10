@@ -17,7 +17,8 @@
     "import-cookies": "tsx src/login.ts",
     "check": "tsc -p tsconfig.json --noEmit",
     "test": "tsx --test test/*.test.ts",
-    "smoke": "tsx src/smoke.ts"
+    "smoke": "tsx src/smoke.ts",
+    "convert-cookies": "tsx scripts/convert_cookies.ts"
   },
   "files": [
     "dist/",
